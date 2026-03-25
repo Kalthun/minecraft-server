@@ -47,25 +47,22 @@ in
 
         });
 
-        "world/datapacks" = symlinkJoin {
-          name = "datapacks";
-          paths = [
-            ./datapacks/afk-display.zip
-            ./datapacks/anti-enderman-grief.zip
-            ./datapacks/coordinates-hud.zip
-            ./datapacks/durability-ping.zip
-            ./datapacks/multiplayer-sleep.zip
-            ./datapacks/name-colors.zip
-            ./datapacks/nether-portal-coords.zip
-            ./datapacks/player-head-drops.zip
-            ./datapacks/real-time-clock.zip
-            ./datapacks/silence-mobs.zip
-            ./datapacks/spawning-spheres.zip
-            ./datapacks/unlock-all-recipes.zip
-            ./datapacks/villager-workstation-highlights.zip
-            ./datapacks/wandering-trader-announcements.zip
-          ];
-        };
+        "world/datapacks" = linkFarmFromDrvs "datapacks" [
+          ./datapacks/afk-display.zip
+          ./datapacks/anti-enderman-grief.zip
+          ./datapacks/coordinates-hud.zip
+          ./datapacks/durability-ping.zip
+          ./datapacks/multiplayer-sleep.zip
+          ./datapacks/name-colors.zip
+          ./datapacks/nether-portal-coords.zip
+          ./datapacks/player-head-drops.zip
+          ./datapacks/real-time-clock.zip
+          ./datapacks/silence-mobs.zip
+          ./datapacks/spawning-spheres.zip
+          ./datapacks/unlock-all-recipes.zip
+          ./datapacks/villager-workstation-highlights.zip
+          ./datapacks/wandering-trader-announcements.zip
+        ];
 
       };
 
