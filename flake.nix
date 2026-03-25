@@ -20,6 +20,7 @@
     self,
     nixpkgs,
     nix-minecraft,
+    ...
   }:
   let
     system = "x86_64-linux";
@@ -28,10 +29,11 @@
 
     nixosConfigurations.mini = nixpkgs.lib.nixosSystem {
       inherit system;
-      specialArgs = { inherit inputs nix-minecraft; };
+      specialArgs = { inherit inputs; };
       modules = [
         ./hosts/mini/configuration.nix
-        ./hosts/mini/minecraft.nix
+        ./minecraft.nix
+        inputs.nix-minecraft.nixosModules.minecraft-servers
       ];
     };
 

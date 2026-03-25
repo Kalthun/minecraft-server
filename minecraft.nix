@@ -1,6 +1,7 @@
-{ pkgs, nix-minecraft, ... }:
+{ pkgs, inputs, ... }:
 with pkgs;
 let
+  nix-minecraft = inputs.nix-minecraft;
   rconPassword = "password";
 in
 {
@@ -35,11 +36,15 @@ in
         white-list = true;
       };
 
-      mods = {
-        fabric-api.src = fetchurl {
-          url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/i5tSkVBH/fabric-api-0.141.3%2B1.21.11.jar";
-          sha256 = "sha256-hsRTqGE5Zi53VpfQOwynhn9Uc3SGjAyz49wG+Y2/7vU=";
-        };
+      symlinks = {
+	"mods" = linkFarmFromDrvs "mods" (builtins.attrValues {
+
+          FabricAPI = fetchurl {
+            url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/i5tSkVBH/fabric-api-0.141.3%2B1.21.11.jar";
+            sha256 = "sha256-hsRTqGE5Zi53VpfQOwynhn9Uc3SGjAyz49wG+Y2/7vU=";
+          };
+
+        });
       };
 
     };
@@ -51,18 +56,10 @@ in
     mcrcon
 
     (writeShellScriptBin "mc-cmd" ''
-      if [ -z "$1" ]; then
-        echo "Usage: mc-cmd <command>"
-        exit 1
-      fi
       exec ${mcrcon}/bin/mcrcon -H 127.0.0.1 -P 25575 -p ${rconPassword} "$@"
     '')
 
     (writeShellScriptBin "mc-hash" ''
-      if [ -z "$1" ]; then
-        echo "Usage: mc-hash <url>"
-        exit 1
-      fi
       nix hash convert --hash-algo sha256 --to sri $(nix-prefetch-url "$1")
     '')
 
