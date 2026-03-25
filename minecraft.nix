@@ -21,6 +21,7 @@ in
 
       whitelist = {
         kalthun = "97b72e9d-efc0-449c-94cd-5405f62c1be6";
+        hiuule = "8d1e1c8c-d7c0-49ad-a2e2-50cb8f3e9cf2";
       };
 
       serverProperties = {
@@ -39,12 +40,7 @@ in
       symlinks = {
 
 	      "mods" = linkFarmFromDrvs "mods" (builtins.attrValues {
-
-          FabricAPI = fetchurl {
-            url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/i5tSkVBH/fabric-api-0.141.3%2B1.21.11.jar";
-            sha256 = "sha256-hsRTqGE5Zi53VpfQOwynhn9Uc3SGjAyz49wG+Y2/7vU=";
-          };
-
+          FabricAPI = fetchurl { url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/i5tSkVBH/fabric-api-0.141.3%2B1.21.11.jar"; sha256 = "sha256-hsRTqGE5Zi53VpfQOwynhn9Uc3SGjAyz49wG+Y2/7vU="; };
         });
 
         "world/datapacks" = linkFarm "datapacks" [
@@ -73,15 +69,6 @@ in
   environment.systemPackages = [
     zellij
     mcrcon
-
-    (writeShellScriptBin "mc-cmd" ''
-      exec ${mcrcon}/bin/mcrcon -H 127.0.0.1 -P 25575 -p ${rconPassword} "$@"
-    '')
-
-    (writeShellScriptBin "mc-hash" ''
-      nix hash convert --hash-algo sha256 --to sri $(nix-prefetch-url "$1")
-    '')
-
   ];
 
   # Tailscale
