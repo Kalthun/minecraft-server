@@ -15,7 +15,7 @@
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
     openssh.authorizedKeys.keys = [
-      # change later
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN/9oYfDscH4zi7wjA7MXLJv/yLemtpli5V2HbnXcOrD kalthun@dirt" # [] Office PC
     ];
   };
 
