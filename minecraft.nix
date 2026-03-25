@@ -47,21 +47,21 @@ in
 
         });
 
-        "world/datapacks" = linkFarmFromDrvs "datapacks" [
-          ./datapacks/afk-display.zip
-          ./datapacks/anti-enderman-grief.zip
-          ./datapacks/coordinates-hud.zip
-          ./datapacks/durability-ping.zip
-          ./datapacks/multiplayer-sleep.zip
-          ./datapacks/name-colors.zip
-          ./datapacks/nether-portal-coords.zip
-          ./datapacks/player-head-drops.zip
-          ./datapacks/real-time-clock.zip
-          ./datapacks/silence-mobs.zip
-          ./datapacks/spawning-spheres.zip
-          ./datapacks/unlock-all-recipes.zip
-          ./datapacks/villager-workstation-highlights.zip
-          ./datapacks/wandering-trader-announcements.zip
+        "world/datapacks" = linkFarm "datapacks" [
+          { name = "afk-display.zip"; path = ./datapacks/afk-display.zip; }
+          { name = "anti-enderman-grief.zip"; path = ./datapacks/anti-enderman-grief.zip; }
+          { name = "coordinates-hud.zip"; path = ./datapacks/coordinates-hud.zip; }
+          { name = "durability-ping.zip"; path = ./datapacks/durability-ping.zip; }
+          { name = "multiplayer-sleep.zip"; path = ./datapacks/multiplayer-sleep.zip; }
+          { name = "name-colors.zip"; path = ./datapacks/name-colors.zip; }
+          { name = "nether-portal-coords.zip"; path = ./datapacks/nether-portal-coords.zip; }
+          { name = "player-head-drops.zip"; path = ./datapacks/player-head-drops.zip; }
+          { name = "real-time-clock.zip"; path = ./datapacks/real-time-clock.zip; }
+          { name = "silence-mobs.zip"; path = ./datapacks/silence-mobs.zip; }
+          { name = "spawning-spheres.zip"; path = ./datapacks/spawning-spheres.zip; }
+          { name = "unlock-all-recipes.zip"; path = ./datapacks/unlock-all-recipes.zip; }
+          { name = "villager-workstation-highlights.zip"; path = ./datapacks/villager-workstation-highlights.zip; }
+          { name = "wandering-trader-announcements.zip"; path = ./datapacks/wandering-trader-announcements.zip; }
         ];
 
       };
