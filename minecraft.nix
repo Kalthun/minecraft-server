@@ -48,20 +48,77 @@ in
         });
 
         "world/datapacks" = linkFarmFromDrvs "datapacks" (builtins.attrValues {
-          afk-display                     = ../../datapacks/afk_display.zip;
-          anti-enderman-grief             = ../../datapacks/anti_enderman_grief.zip;
-          coordinates-hud                 = ../../datapacks/coordinates_hud.zip;
-          durability-ping                 = ../../datapacks/durability_ping.zip;
-          multiplayer-sleep               = ../../datapacks/multiplayer_sleep.zip;
-          name-colors                     = ../../datapacks/name_colors.zip;
-          nether-portal-coords            = ../../datapacks/nether_portal_coords.zip;
-          player-head-drops               = ../../datapacks/player_head_drops.zip;
-          real-time-clock                 = ../../datapacks/real_time_clock.zip;
-          silence-mobs                    = ../../datapacks/silence_mobs.zip;
-          spawning-spheres                = ../../datapacks/spawning_spheres.zip;
-          unlock-all-recipes              = ../../datapacks/unlock_all_recipes.zip;
-          villager-workstation-highlights = ../../datapacks/villager_workstation_highlights.zip;
-          wandering-trader-announcements  = ../../datapacks/wandering_trader_announcements.zip;
+
+          afk-display = builtins.path {
+            path = ./datapacks/afk-display.zip;
+            name = "afk-display.zip";
+          };
+
+          anti-enderman-grief = builtins.path {
+            path = ./datapacks/anti-enderman-grief.zip;
+            name = "anti-enderman-grief.zip";
+          };
+
+          coordinates-hud = builtins.path {
+            path = ./datapacks/coordinates-hud.zip;
+            name = "coordinates-hud.zip";
+          };
+
+          durability-ping = builtins.path {
+            path = ./datapacks/durability-ping.zip;
+            name = "durability-ping.zip";
+          };
+
+          multiplayer-sleep = builtins.path {
+            path = ./datapacks/multiplayer-sleep.zip;
+            name = "multiplayer-sleep.zip";
+          };
+
+          name-colors = builtins.path {
+            path = ./datapacks/name-colors.zip;
+            name = "name-colors.zip";
+          };
+
+          nether-portal-coords = builtins.path {
+            path = ./datapacks/nether-portal-coords.zip;
+            name = "nether-portal-coords.zip";
+          };
+
+          player-head-drops = builtins.path {
+            path = ./datapacks/player-head-drops.zip;
+            name = "player-head-drops.zip";
+          };
+
+          real-time-clock = builtins.path {
+            path = ./datapacks/real-time-clock.zip;
+            name = "real-time-clock.zip";
+          };
+
+          silence-mobs = builtins.path {
+            path = ./datapacks/silence-mobs.zip;
+            name = "silence-mobs.zip";
+          };
+
+          spawning-spheres = builtins.path {
+            path = ./datapacks/spawning-spheres.zip;
+            name = "spawning-spheres.zip";
+          };
+
+          unlock-all-recipes = builtins.path {
+            path = ./datapacks/unlock-all-recipes.zip;
+            name = "unlock-all-recipes.zip";
+          };
+
+          villager-workstation-highlights = builtins.path {
+            path = ./datapacks/villager-workstation-highlights.zip;
+            name = "villager-workstation-highlights.zip";
+          };
+
+          wandering-trader-announcements = builtins.path {
+            path = ./datapacks/wandering-trader-announcements.zip;
+            name = "wandering-trader-announcements.zip";
+          };
+
         });
 
       };
