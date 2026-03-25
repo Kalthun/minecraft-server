@@ -16,12 +16,13 @@ in
     servers.savage = {
 
       enable = true;
-      package = fabricServers.fabric-1_21_11; # [] VERSION
-      jvmOpts = "-Xms2G -Xmx4G -XX:+UseG1GC";
+      package = fabricServers.fabric-1_21_11; # [] UPDATE
+      jvmOpts = "-Xms2G -Xmx4G -XX:+UseG1GC"; # [] Improve
 
       whitelist = {
         kalthun = "97b72e9d-efc0-449c-94cd-5405f62c1be6";
         hiuule = "8d1e1c8c-d7c0-49ad-a2e2-50cb8f3e9cf2";
+        LunarAlloy = "9307d0b2-89d9-45df-bcce-494a9154755d";
       };
 
       serverProperties = {
@@ -29,7 +30,7 @@ in
         difficulty = "hard";
         gamemode = "survival";
         max-players = 8;
-        motd = "Savage Survival SMP";
+        motd = "Savage Survival 3.0";
         enable-rcon = true;
         "rcon.port" = 25575;
         "rcon.password" = rconPassword;
@@ -41,6 +42,7 @@ in
 
 	      "mods" = linkFarmFromDrvs "mods" (builtins.attrValues {
           FabricAPI = fetchurl { url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/i5tSkVBH/fabric-api-0.141.3%2B1.21.11.jar"; sha256 = "sha256-hsRTqGE5Zi53VpfQOwynhn9Uc3SGjAyz49wG+Y2/7vU="; };
+          SimpleVoiceChat = fetchurl { url = "https://cdn.modrinth.com/data/9eGKb6K1/versions/pFTZ8sqQ/voicechat-fabric-1.21.11-2.6.12.jar"; sha256 = "sha256-uNzX07z1RnkoqYnf7w2mzkDoA4J2lnuimyqkpnUdAi0="; };
         });
 
         "world/datapacks" = linkFarm "datapacks" [
@@ -54,7 +56,6 @@ in
           { name = "player-head-drops.zip"; path = ./datapacks/player-head-drops.zip; }
           { name = "real-time-clock.zip"; path = ./datapacks/real-time-clock.zip; }
           { name = "silence-mobs.zip"; path = ./datapacks/silence-mobs.zip; }
-          { name = "spawning-spheres.zip"; path = ./datapacks/spawning-spheres.zip; }
           { name = "unlock-all-recipes.zip"; path = ./datapacks/unlock-all-recipes.zip; }
           { name = "villager-workstation-highlights.zip"; path = ./datapacks/villager-workstation-highlights.zip; }
           { name = "wandering-trader-announcements.zip"; path = ./datapacks/wandering-trader-announcements.zip; }
@@ -67,7 +68,6 @@ in
 
   # TUI
   environment.systemPackages = [
-    zellij
     mcrcon
   ];
 

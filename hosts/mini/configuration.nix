@@ -38,6 +38,7 @@
     };
   };
 
+  # CAPSLOCK -> ESC
   services.kanata = {
     enable = true;
     keyboards = {

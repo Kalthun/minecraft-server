@@ -2,7 +2,7 @@
 
 ## Setup
 
-0. Add host to flake.nix
+### 0. Add host to flake.nix
 ```nix
 in
 {
@@ -21,7 +21,7 @@ in
 };
 ```
 
-1. Edit default config
+### 1. Edit default config
 ```sh
 sudo nano /etc/nixos/configuration.nix
 ```
@@ -31,12 +31,12 @@ environment.systemPackages = with pkgs; [
 ];
 ```
 
-2. Rebuild
+### 2. Rebuild
 ```sh
 sudo nixos-rebuild switch
 ```
 
-3. Generate and configure ssh key
+### 3. Generate and configure ssh key
 ```sh
 ssh-keygen
 ```
@@ -44,13 +44,13 @@ ssh-keygen
 cat ~/.ssh/id_ed25519.pub
 ```
 
-4. Clone repo
+### 4. Clone repo
 ```sh
 cd
 git clone git@github.com:Kalthun/minecraft-server.git
 ```
 
-5. Setup system
+### 5. Setup system
 ```sh
 cd minecraft-server/hosts
 mkdir [hostname]
@@ -68,12 +68,12 @@ sudo chown -R $(id -un):users ~/minecraft-server
 sudo ln -s ~/minecraft-server/* /etc/nixos/
 ```
 
-6. Git
+### 6. Git
 ```sh
 git add -A
 ```
 
-7. Rebuild (again) & Reboot
+### 7. Rebuild (again) & Reboot
 ```sh
 sudo nixos-rebuild switch --flake ~/minecraft-server/#[hostname]
 ```
@@ -81,7 +81,7 @@ sudo nixos-rebuild switch --flake ~/minecraft-server/#[hostname]
 sudo reboot
 ```
 
-8. Tailscale
+### 8. Tailscale
 ```sh
 sudo tailscale up
 ```
