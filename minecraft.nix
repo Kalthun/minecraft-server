@@ -37,7 +37,8 @@ in
       };
 
       symlinks = {
-	"mods" = linkFarmFromDrvs "mods" (builtins.attrValues {
+
+	      "mods" = linkFarmFromDrvs "mods" (builtins.attrValues {
 
           FabricAPI = fetchurl {
             url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/i5tSkVBH/fabric-api-0.141.3%2B1.21.11.jar";
@@ -45,6 +46,24 @@ in
           };
 
         });
+
+        "world/datapacks" = linkFarmFromDrvs "datapacks" (builtins.attrValues {
+          afk-display                     = ../../datapacks/afk_display.zip;
+          anti-enderman-grief             = ../../datapacks/anti_enderman_grief.zip;
+          coordinates-hud                 = ../../datapacks/coordinates_hud.zip;
+          durability-ping                 = ../../datapacks/durability_ping.zip;
+          multiplayer-sleep               = ../../datapacks/multiplayer_sleep.zip;
+          name-colors                     = ../../datapacks/name_colors.zip;
+          nether-portal-coords            = ../../datapacks/nether_portal_coords.zip;
+          player-head-drops               = ../../datapacks/player_head_drops.zip;
+          real-time-clock                 = ../../datapacks/real_time_clock.zip;
+          silence-mobs                    = ../../datapacks/silence_mobs.zip;
+          spawning-spheres                = ../../datapacks/spawning_spheres.zip;
+          unlock-all-recipes              = ../../datapacks/unlock_all_recipes.zip;
+          villager-workstation-highlights = ../../datapacks/villager_workstation_highlights.zip;
+          wandering-trader-announcements  = ../../datapacks/wandering_trader_announcements.zip;
+        });
+
       };
 
     };
