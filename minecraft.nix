@@ -27,6 +27,7 @@ in
 
       serverProperties = {
         server-port = 25565;
+        level-seed = "4241307255164905481"; # Large Mushroom Island @ 517 70 -224
         difficulty = "hard";
         gamemode = "survival";
         max-players = 8;
