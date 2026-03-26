@@ -41,7 +41,7 @@ with pkgs;
         # resourcepack
         resource-pack = "https://download.mc-packs.net/pack/d4e61e7ec43e4a9c09f2338cce9914c8e9f507f6.zip";
         resource-pack-sha1 = "d4e61e7ec43e4a9c09f2338cce9914c8e9f507f6";
-        resource-pack-prompt = "{\"text\":\"Install recommended resourcepack?\"}";
+        resource-pack-prompt = "{\"text\":\"Makes things a little easier.\"}";
         require-resource-pack = false;
 
       };
