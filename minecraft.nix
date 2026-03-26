@@ -16,13 +16,13 @@ in
     servers.savage = {
 
       enable = true;
-      package = fabricServers.fabric-1_21_11; # [] UPDATE
-      jvmOpts = "-Xms2G -Xmx4G -XX:+UseG1GC"; # [] Improve
+      package = fabricServers.fabric-1_21_11; # [🔄]
+      jvmOpts = "-Xms2G -Xmx4G -XX:+UseG1GC"; # [🚩]
 
       whitelist = {
-        kalthun = "97b72e9d-efc0-449c-94cd-5405f62c1be6";
-        hiuule = "8d1e1c8c-d7c0-49ad-a2e2-50cb8f3e9cf2";
-        LunarAlloy = "9307d0b2-89d9-45df-bcce-494a9154755d";
+        kalthun    = "97b72e9d-efc0-449c-94cd-5405f62c1be6"; # james
+        hiuule     = "8d1e1c8c-d7c0-49ad-a2e2-50cb8f3e9cf2"; # hieu
+        LunarAlloy = "9307d0b2-89d9-45df-bcce-494a9154755d"; # lilith
       };
 
       serverProperties = {
@@ -41,7 +41,8 @@ in
 
       symlinks = {
 
-	      "mods" = linkFarmFromDrvs "mods" (builtins.attrValues {
+          # [🔄]
+          "mods" = linkFarmFromDrvs "mods" (builtins.attrValues {
           FabricAPI       = fetchurl { url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/i5tSkVBH/fabric-api-0.141.3%2B1.21.11.jar";                    sha256 = "sha256-hsRTqGE5Zi53VpfQOwynhn9Uc3SGjAyz49wG+Y2/7vU="; };
           ClothConfigAPI  = fetchurl { url = "https://cdn.modrinth.com/data/9s6osm5g/versions/xuX40TN5/cloth-config-21.11.153-fabric.jar";                   sha256 = "sha256-ikDITl7N5SWs+2xOE7gALaz8o++VNNf69ugEllb0I8g="; };
           Lithium         = fetchurl { url = "https://cdn.modrinth.com/data/gvQqBUqZ/versions/Ow7wA0kG/lithium-fabric-0.21.4%2Bmc1.21.11.jar";               sha256 = "sha256-UTXEHaW0PL3LKUJL3mUZUUOsQITiODTI6sBllCIBx4s="; };
@@ -53,6 +54,7 @@ in
           SimpleVoiceChat = fetchurl { url = "https://cdn.modrinth.com/data/9eGKb6K1/versions/pFTZ8sqQ/voicechat-fabric-1.21.11-2.6.12.jar";                 sha256 = "sha256-HwedHcqW2UhPdxPNROKWUcwIxAp0kj0gSdB7/dX3bcA="; };
         });
 
+        # [🔄]
         "world/datapacks" = linkFarm "datapacks" [
           { name = "afk-display.zip";                     path = ./datapacks/afk-display.zip; }
           { name = "anti-enderman-grief.zip";             path = ./datapacks/anti-enderman-grief.zip; }
