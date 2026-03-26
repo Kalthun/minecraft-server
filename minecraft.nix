@@ -13,7 +13,7 @@ with pkgs;
 
       enable = true;
       package = fabricServers.fabric-1_21_11; # [🔄]
-      jvmOpts = "-Xms16G -Xmx16G" # [🚩]
+      jvmOpts = "-Xms16G -Xmx16G"; # [🚩]
 
       whitelist = {
         kalthun    = "97b72e9d-efc0-449c-94cd-5405f62c1be6"; # james
