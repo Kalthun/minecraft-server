@@ -24,3 +24,8 @@ logs:
 
 status:
     systemctl status minecraft-server-{{server-name}}
+
+clean:
+    sudo nix-collect-garbage -d
+    nix-collect-garbage -d
+    nix store optimise
