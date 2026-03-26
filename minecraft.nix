@@ -39,8 +39,8 @@ with pkgs;
         "rcon.password" = "password";
 
         # resourcepack
-        resource-pack = "https://download.mc-packs.net/pack/5320d84ca1c43bf081cd351a2bfaaf9ca32f4169.zip";
-        resource-pack-sha1 = "89393197f3e17be20576a4c205745fe2607776ea";
+        resource-pack = "https://download.mc-packs.net/pack/d4e61e7ec43e4a9c09f2338cce9914c8e9f507f6.zip";
+        resource-pack-sha1 = "d4e61e7ec43e4a9c09f2338cce9914c8e9f507f6";
         resource-pack-prompt = "{\"text\":\"Install recommended resourcepack?\"}";
         require-resource-pack = false;
 
