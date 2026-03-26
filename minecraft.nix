@@ -1,11 +1,7 @@
 { pkgs, inputs, ... }:
 with pkgs;
-let
-  nix-minecraft = inputs.nix-minecraft;
-  rconPassword = "password";
-in
 {
-  nixpkgs.overlays = [ nix-minecraft.overlay ];
+  nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
 
   # Server
   services.minecraft-servers = {
@@ -26,17 +22,28 @@ in
       };
 
       serverProperties = {
+
+        # server
         server-port = 25565;
+        motd = "Savage Survival 3.0";
         level-seed = "4241307255164905481"; # Large Mushroom Island @ 517 70 -224
         difficulty = "hard";
         gamemode = "survival";
         max-players = 8;
-        motd = "Savage Survival 3.0";
-        enable-rcon = true;
-        "rcon.port" = 25575;
-        "rcon.password" = rconPassword;
-        broadcast-rcon-to-ops = true;
         white-list = true;
+
+        # mcrcon
+        enable-rcon = true;
+        broadcast-rcon-to-ops = true;
+        "rcon.port" = 25575;
+        "rcon.password" = "password";
+
+        # resourcepack
+        resource-pack = "https://download.mc-packs.net/pack/5320d84ca1c43bf081cd351a2bfaaf9ca32f4169.zip";
+        resource-pack-sha1 = "5320d84ca1c43bf081cd351a2bfaaf9ca32f4169";
+        resource-pack-prompt = "Install recommended resourcepack?";
+        require-resource-pack = false;
+
       };
 
       symlinks = {
