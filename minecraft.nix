@@ -28,10 +28,14 @@ with pkgs;
         server-port = 25565;
         motd = "Savage Survival 3.0";
         level-seed = "4241307255164905481"; # Large Mushroom Island @ [517, 70, -224]
+        level-name = "world";
         difficulty = "hard";
         gamemode = "survival";
         max-players = 8;
         white-list = true;
+        pause-when-empty-seconds = -1;
+        simulation-distance = 10;
+        view-distance = 10;
 
         # mcrcon
         enable-rcon = true;
@@ -47,7 +51,13 @@ with pkgs;
 
       };
 
+      # Client
+      # Dynamic Crosshair
+
       symlinks = {
+
+          # ADD:
+          # (all of) Voxy
 
           # [🔄]
           "mods" = linkFarmFromDrvs "mods" (builtins.attrValues {
@@ -56,8 +66,9 @@ with pkgs;
             Lithium             = fetchurl { url = "https://cdn.modrinth.com/data/gvQqBUqZ/versions/Ow7wA0kG/lithium-fabric-0.21.4%2Bmc1.21.11.jar";               sha256 = "sha256-UTXEHaW0PL3LKUJL3mUZUUOsQITiODTI6sBllCIBx4s="; };
             FerriteCore         = fetchurl { url = "https://cdn.modrinth.com/data/uXXizFIs/versions/Ii0gP3D8/ferritecore-8.2.0-fabric.jar";                        sha256 = "sha256-92vXYMv0goDMfEMYD1CJpGI1+iTZNKis89oEpmTCxxU="; };
             C2ME                = fetchurl { url = "https://cdn.modrinth.com/data/VSNURh3q/versions/olrVZpJd/c2me-fabric-mc1.21.11-0.3.6.0.0.jar";                 sha256 = "sha256-DwWNNWBfzM3xl+WpB3QDSubs3yc/NMMV3c1I9QYx3f8="; };
+            Chunky              = fetchurl { url = "https://cdn.modrinth.com/data/fALzjamp/versions/1CpEkmcD/Chunky-Fabric-1.4.55.jar";                            sha256 = "sha256-M8vZvODjNmhRxLWYYQQzNOt8GJIkjx7xFAO77bR2vRU="; };
             FastNoise           = fetchurl { url = "https://cdn.modrinth.com/data/OnlVIpq5/versions/fP2AezPw/zfastnoise-1.0.25%2B1.21.11.jar";                     sha256 = "sha256-eYkfD/ohen/P0+F8lRMKoh9v9RiXfmG6zuSRbaOC0+Q="; };
-            # NoisiumForked       = fetchurl { url = "https://cdn.modrinth.com/data/hasdd01q/versions/VyMvRQKq/noisium-fabric-2.8.3%2Bmc1.21.11.jar";                sha256 = "sha256-CTiufqNWCeWByqr6xtK0K/U9DU25OpFXhPe3tBbMMPg="; };
+            Spark               = fetchurl { url = "https://cdn.modrinth.com/data/l6YH9Als/versions/gonLOAU1/spark-1.10.170-fabric.jar";                           sha256 = "sha256-U2UqZoLWmxqJJO6a6OYZJVUWOatUC9U/mBSxEpQ15+U="; };
             LetMeDespawn        = fetchurl { url = "https://cdn.modrinth.com/data/vE2FN5qn/versions/7gmpSYHk/LetMeDespawn-1.21.11-x-fabric-1.6.2.jar";             sha256 = "sha256-UKfHwvvBZW5EiBhq2npiVpJ/x0rEiavaxWZ/Z9/BhtM="; };
             Almanac             = fetchurl { url = "https://cdn.modrinth.com/data/Gi02250Z/versions/Tcl38ycb/Almanac-1.21.11-x-fabric-1.6.2.jar";                  sha256 = "sha256-YOXvEKmZf1KAt5d2i7E2H7Hg2AWMvdgFxWNeQFa89/s="; };
             Clumps              = fetchurl { url = "https://cdn.modrinth.com/data/Wnxd13zP/versions/OgBE8Rz4/Clumps-fabric-1.21.11-29.0.0.1.jar";                  sha256 = "sha256-4yESCFKYF+XvzQ4u6W+cjFFui7reWihs1rii9OcPYWM="; };
@@ -73,7 +84,7 @@ with pkgs;
           });
 
         # [🔄]
-        "world/datapacks" = linkFarm "datapacks" [
+        "world/datapacks" = linkFarm "datapacks" [ # <-- change "world" to level-name var
           { name = "afk-display.zip";                     path = ./datapacks/afk-display.zip; }
           { name = "anti-enderman-grief.zip";             path = ./datapacks/anti-enderman-grief.zip; }
           { name = "coordinates-hud.zip";                 path = ./datapacks/coordinates-hud.zip; }
