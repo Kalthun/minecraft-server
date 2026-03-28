@@ -130,6 +130,7 @@ with pkgs;
     trustedInterfaces = [ "tailscale0" ];
     allowedTCPPorts = [ 25565 ];
     allowedUDPPorts = [ 25565 ];
+    # checkReversePath = "loose"; # [⚠️] test later
   };
 
 }
