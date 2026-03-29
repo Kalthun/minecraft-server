@@ -78,21 +78,21 @@ with pkgs;
             SimpleVoiceChat     = fetchurl { url = "https://cdn.modrinth.com/data/9eGKb6K1/versions/pFTZ8sqQ/voicechat-fabric-1.21.11-2.6.12.jar";                 sha256 = "sha256-HwedHcqW2UhPdxPNROKWUcwIxAp0kj0gSdB7/dX3bcA="; };
           });
 
-        # Server datapacks
+        # Server datapacks # [⚠️]
         "world/datapacks" = linkFarm "datapacks" [ # [🔄]
-          { name = "afk-display.zip";                     path = ./datapacks/afk-display.zip; }
-          { name = "anti-enderman-grief.zip";             path = ./datapacks/anti-enderman-grief.zip; }
-          { name = "coordinates-hud.zip";                 path = ./datapacks/coordinates-hud.zip; }
-          { name = "durability-ping.zip";                 path = ./datapacks/durability-ping.zip; }
-          { name = "multiplayer-sleep.zip";               path = ./datapacks/multiplayer-sleep.zip; }
-          { name = "name-colors.zip";                     path = ./datapacks/name-colors.zip; }
-          { name = "nether-portal-coords.zip";            path = ./datapacks/nether-portal-coords.zip; }
-          { name = "player-head-drops.zip";               path = ./datapacks/player-head-drops.zip; }
-          { name = "real-time-clock.zip";                 path = ./datapacks/real-time-clock.zip; }
-          { name = "silence-mobs.zip";                    path = ./datapacks/silence-mobs.zip; }
-          { name = "unlock-all-recipes.zip";              path = ./datapacks/unlock-all-recipes.zip; }
-          { name = "villager-workstation-highlights.zip"; path = ./datapacks/villager-workstation-highlights.zip; }
-          { name = "wandering-trader-announcements.zip";  path = ./datapacks/wandering-trader-announcements.zip; }
+          { name = "afk-display.zip";                     path = ../../datapacks/afk-display.zip; }
+          { name = "anti-enderman-grief.zip";             path = ../../datapacks/anti-enderman-grief.zip; }
+          { name = "coordinates-hud.zip";                 path = ../../datapacks/coordinates-hud.zip; }
+          { name = "durability-ping.zip";                 path = ../../datapacks/durability-ping.zip; }
+          { name = "multiplayer-sleep.zip";               path = ../../datapacks/multiplayer-sleep.zip; }
+          { name = "name-colors.zip";                     path = ../../datapacks/name-colors.zip; }
+          { name = "nether-portal-coords.zip";            path = ../../datapacks/nether-portal-coords.zip; }
+          { name = "player-head-drops.zip";               path = ../../datapacks/player-head-drops.zip; }
+          { name = "real-time-clock.zip";                 path = ../../datapacks/real-time-clock.zip; }
+          { name = "silence-mobs.zip";                    path = ../../datapacks/silence-mobs.zip; }
+          { name = "unlock-all-recipes.zip";              path = ../../datapacks/unlock-all-recipes.zip; }
+          { name = "villager-workstation-highlights.zip"; path = ../../datapacks/villager-workstation-highlights.zip; }
+          { name = "wandering-trader-announcements.zip";  path = ../../datapacks/wandering-trader-announcements.zip; }
         ];
 
       };
