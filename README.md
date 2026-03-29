@@ -3,7 +3,7 @@
 ## Setup
 
 ### 1. Add host to flake.nix
-You can either use the default host or add a new host
+You can either use the default host or add a new host.
 ```nix
 in
 {
@@ -51,7 +51,7 @@ services.tailscale.enable = true;
 sudo nixos-rebuild switch
 ```
 
-### 4 Setup Tailscale (while not headless)
+### 4. Setup Tailscale (while not headless)
 ```sh
 sudo tailscale up
 ```
@@ -100,4 +100,13 @@ sudo nixos-rebuild switch --flake ~/minecraft-server/#[hostname]
 ```
 ```sh
 sudo reboot
+```
+
+## Extra
+
+### Reset world (doesn't full reset)
+```sh
+sudo systemctl stop minecraft-server-savage
+sudo rm -rf /srv/minecraft/savage/world
+sudo systemctl start minecraft-server-savage
 ```
