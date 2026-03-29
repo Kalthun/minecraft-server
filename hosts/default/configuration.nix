@@ -11,8 +11,7 @@
   time.timeZone = "America/Toronto";
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  # [🚨] "user" should be set to same value used when initially installing nixos
-  users.users.user = { # [🪧]
+  users.users.user = { # [🚨] "user" should be set to same value used when initially installing nixos
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
     openssh.authorizedKeys.keys = [

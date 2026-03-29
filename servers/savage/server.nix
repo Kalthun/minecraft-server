@@ -18,7 +18,7 @@ with pkgs;
     # Server
     server-port = 25565; # [🚨] Must be unique for each server
     motd = "Savage Survival 3.0";
-    # level-seed = ""; # [ℹ️] Set seed declaritively
+    level-seed = "4241307255164905481"; # [ℹ️] Set seed declaritively
     level-name = "world";
     difficulty = "hard";
     gamemode = "survival";
