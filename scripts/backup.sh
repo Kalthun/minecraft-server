@@ -34,6 +34,8 @@ trap cleanup EXIT
 
 echo "[$(date --iso-8601=seconds)] Starting backup for ${SERVER_NAME}"
 echo "[$(date --iso-8601=seconds)] Backup file: ${backup_file}"
+mcrcon -H 127.0.0.1 -P "$RCON_PORT" -p "$RCON_PASSWORD" "say [Backup] Starting world backup..."
+mcrcon -H 127.0.0.1 -P "$RCON_PORT" -p "$RCON_PASSWORD" "say [Backup] Saving and locking world data..."
 
 mcrcon -H 127.0.0.1 -P "$RCON_PORT" -p "$RCON_PASSWORD" "save-all flush"
 mcrcon -H 127.0.0.1 -P "$RCON_PORT" -p "$RCON_PASSWORD" "save-off"
@@ -47,3 +49,4 @@ find "$BACKUP_DIR" -maxdepth 1 -type f -name "${LEVEL_NAME}-*.tar.gz" -printf '%
   | xargs -r rm -f
 
 echo "[$(date --iso-8601=seconds)] Backup complete for ${SERVER_NAME}"
+mcrcon -H 127.0.0.1 -P "$RCON_PORT" -p "$RCON_PASSWORD" "say [Backup] Backup complete."
