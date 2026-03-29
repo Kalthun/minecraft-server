@@ -23,19 +23,29 @@
     ...
   }:
   let
-    system = "x86_64-linux";
+    system = "x86_64-linux"; # [🪧]
   in
   {
 
-    nixosConfigurations.mini = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = { inherit inputs; };
       modules = [
-        ./hosts/mini/configuration.nix
-        ./minecraft.nix
+        ./hosts/default/configuration.nix
+        ./hosts/default/minecraft.nix
         inputs.nix-minecraft.nixosModules.minecraft-servers
       ];
     };
+
+    # nixosConfigurations.new = nixpkgs.lib.nixosSystem {
+    #   inherit system;
+    #   specialArgs = { inherit inputs; };
+    #   modules = [
+    #     ./hosts/new/configuration.nix
+    #     ./hosts/new/minecraft.nix
+    #     inputs.nix-minecraft.nixosModules.minecraft-servers
+    #   ];
+    # };
 
   };
 

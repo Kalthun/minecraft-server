@@ -7,12 +7,12 @@
 in
 {
 
-    nixosConfigurations.mini = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = { inherit inputs nix-minecraft; };
         modules = [
-        ./hosts/mini/configuration.nix
-        ./hosts/mini/minecraft.nix
+        ./hosts/default/configuration.nix
+        ./minecraft.nix
         ];
     };
 
@@ -50,7 +50,7 @@ cd
 git clone git@github.com:Kalthun/minecraft-server.git
 ```
 
-### 5. Setup system
+### 5. Setup host
 ```sh
 cd minecraft-server/hosts
 mkdir [hostname]
@@ -61,11 +61,18 @@ sudo mv /etc/nixos/hardware-configuration.nix ~/minecraft-server/hosts/[hostname
 ```
 (You can copy an existing configuration)
 ```sh
-cp ~/minecraft-server/hosts/mini/configuration.nix ~/minecraft-server/hosts/[hostname]
+cp ~/minecraft-server/hosts/default/configuration.nix ~/minecraft-server/hosts/[hostname]
+cp ~/minecraft-server/hosts/default/minecraft.nix ~/minecraft-server/hosts/[hostname]
 ```
 ```sh
 sudo chown -R $(id -un):users ~/minecraft-server
 sudo ln -s ~/minecraft-server/* /etc/nixos/
+```
+
+### 5.5 Setup Seed
+```
+touch ~/minecraft-server/hosts/[hostname]/seed.txt
+nano seed.txt
 ```
 
 ### 6. Git
