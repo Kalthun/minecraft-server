@@ -37,6 +37,3 @@ logs server="savage":
 
 backup server="savage" port="25575" password="password":
     sudo ./scripts/backup.sh {{server}} {{port}} {{password}}
-
-reset server="savage" seed="":
-    ./scripts/reset.sh {{server}} {{seed}}
