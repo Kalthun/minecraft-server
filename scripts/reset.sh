@@ -27,8 +27,6 @@ fi
 read -r -p "$prompt" confirm
 [[ "$confirm" == "yes" ]] || { echo "Aborted."; exit 0; }
 
-sudo systemctl stop "minecraft-server-${server}"
-
 if [[ "$seed" == "random" ]]; then
   sudo sed -i '/^level-seed=/d' "$props"
 elif [[ "$seed" =~ ^-?[0-9]+$ ]]; then
@@ -39,5 +37,6 @@ elif [[ "$seed" =~ ^-?[0-9]+$ ]]; then
   fi
 fi
 
+sudo systemctl stop "minecraft-server-${server}"
 sudo rm -rf "$world_dir"
 sudo systemctl start "minecraft-server-${server}"
