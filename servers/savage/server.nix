@@ -16,7 +16,7 @@ with pkgs;
   serverProperties = {
 
     # Server
-    server-port = 25565;
+    server-port = 25565; # [⚠️]
     motd = "Savage Survival 3.0";
     level-seed = "4241307255164905481"; # Large Mushroom Island @ [517, 70, -224]
     level-name = "world";
@@ -76,7 +76,6 @@ with pkgs;
       { name = "durability-ping.zip";                 path = ./datapacks/durability-ping.zip; }
       { name = "multiplayer-sleep.zip";               path = ./datapacks/multiplayer-sleep.zip; }
       { name = "name-colors.zip";                     path = ./datapacks/name-colors.zip; }
-      { name = "nether-portal-coords.zip";            path = ./datapacks/nether-portal-coords.zip; }
       { name = "player-head-drops.zip";               path = ./datapacks/player-head-drops.zip; }
       { name = "real-time-clock.zip";                 path = ./datapacks/real-time-clock.zip; }
       { name = "silence-mobs.zip";                    path = ./datapacks/silence-mobs.zip; }
