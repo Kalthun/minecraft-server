@@ -11,6 +11,7 @@
   time.timeZone = "America/Toronto";
   i18n.defaultLocale = "en_CA.UTF-8";
 
+  # [🚨] "user" should be set to same value used when initially installing nixos
   users.users.user = { # [🪧]
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
@@ -38,6 +39,7 @@
     yazi
     evil-helix
     lazygit
+    zellij
 
     # Minecraft
     just
