@@ -2,26 +2,38 @@
 
 ## Setup
 
-### 0. Add host to flake.nix
+### 1. Add host to flake.nix
+You can either use the default host or add a new host
 ```nix
 in
 {
 
+    # default
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = { inherit inputs nix-minecraft; };
-        modules = [
+      inherit system;
+      specialArgs = { inherit inputs; };
+      modules = [
         ./hosts/default/configuration.nix
-        ./minecraft.nix
-        ];
+        ./hosts/default/minecraft.nix
+        inputs.nix-minecraft.nixosModules.minecraft-servers
+      ];
     };
 
-    # copy here
+    # new
+    # nixosConfigurations.new = nixpkgs.lib.nixosSystem {
+    #   inherit system;
+    #   specialArgs = { inherit inputs; };
+    #   modules = [
+    #     ./hosts/new/configuration.nix
+    #     ./hosts/new/minecraft.nix
+    #     inputs.nix-minecraft.nixosModules.minecraft-servers
+    #   ];
+    # };
 
 };
 ```
 
-### 1. Edit default config
+### 2. Edit default config
 ```sh
 sudo nano /etc/nixos/configuration.nix
 ```
@@ -30,13 +42,21 @@ environment.systemPackages = with pkgs; [
   git
 ];
 ```
+```nix
+services.tailscale.enable = true;
+```
 
-### 2. Rebuild
+### 3. Rebuild
 ```sh
 sudo nixos-rebuild switch
 ```
 
-### 3. Generate and configure ssh key
+### 4 Setup Tailscale (while not headless)
+```sh
+sudo tailscale up
+```
+
+### 5. Generate and configure ssh key
 ```sh
 ssh-keygen
 ```
@@ -44,13 +64,13 @@ ssh-keygen
 cat ~/.ssh/id_ed25519.pub
 ```
 
-### 4. Clone repo
+### 6. Clone repo
 ```sh
 cd
 git clone git@github.com:Kalthun/minecraft-server.git
 ```
 
-### 5. Setup host
+### 7. Setup host
 ```sh
 cd minecraft-server/hosts
 mkdir [hostname]
@@ -69,26 +89,15 @@ sudo chown -R $(id -un):users ~/minecraft-server
 sudo ln -s ~/minecraft-server/* /etc/nixos/
 ```
 
-### 5.5 Setup Seed
-```
-touch ~/minecraft-server/hosts/[hostname]/seed.txt
-nano seed.txt
-```
-
-### 6. Git
+### 8. Git
 ```sh
 git add -A
 ```
 
-### 7. Rebuild (again) & Reboot
+### 9. Rebuild (again) & Reboot
 ```sh
 sudo nixos-rebuild switch --flake ~/minecraft-server/#[hostname]
 ```
 ```sh
 sudo reboot
-```
-
-### 8. Tailscale
-```sh
-sudo tailscale up
 ```

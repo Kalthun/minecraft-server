@@ -27,6 +27,7 @@
   in
   {
 
+    # default
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = { inherit inputs; };
@@ -37,6 +38,7 @@
       ];
     };
 
+    # new
     # nixosConfigurations.new = nixpkgs.lib.nixosSystem {
     #   inherit system;
     #   specialArgs = { inherit inputs; };
