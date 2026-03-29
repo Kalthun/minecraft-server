@@ -11,7 +11,7 @@
   time.timeZone = "America/Toronto";
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  users.users.user = {
+  users.users.user = { # [🪧]
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
     openssh.authorizedKeys.keys = [
@@ -22,13 +22,6 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [
-    bat
-    yazi
-    evil-helix
-    lazygit
-  ];
-
   programs.git = {
     enable = true;
     config = {
@@ -36,6 +29,41 @@
       user.email = "jameskwmail@gmail.com"; # [🪧]
       init.defaultBranch = "main";
     };
+  };
+
+  environment.systemPackages = with pkgs; [
+
+    # General
+    bat
+    yazi
+    evil-helix
+    lazygit
+
+    # Minecraft
+    just
+    mcrcon
+
+  ];
+
+  # SSH
+  services.openssh = {
+    enable = true;
+    settings = {
+      PasswordAuthentication = false;
+      PermitRootLogin = "no";
+    };
+  };
+
+  # Tailscale
+  services.tailscale.enable = true;
+
+  # Firewall
+  networking.firewall = {
+    enable = true;
+    trustedInterfaces = [ "tailscale0" ];
+    allowedTCPPorts = [ 25565 ];
+    allowedUDPPorts = [ 25565 ];
+    # checkReversePath = "loose"; # [⚠️] test later
   };
 
   # [ℹ️] CAPSLOCK -> ESC
