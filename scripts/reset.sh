@@ -6,12 +6,12 @@ seed="${2:-}"
 world_dir="/srv/minecraft/${server}/world"
 props="/srv/minecraft/${server}/server.properties"
 
-if [[ ! -f "$props" ]]; then
+if ! sudo test -f "$props"; then
   echo "error: server.properties not found: $props" >&2
   exit 1
 fi
 
-current_seed="$(grep '^level-seed=' "$props" | cut -d= -f2- || true)"
+current_seed="$(sudo grep '^level-seed=' "$props" | cut -d= -f2- || true)"
 
 if [[ "$seed" == "random" ]]; then
   prompt="Reset '${server}' with a random seed? This deletes ${world_dir} [yes/N]: "
@@ -32,7 +32,7 @@ sudo systemctl stop "minecraft-server-${server}"
 if [[ "$seed" == "random" ]]; then
   sudo sed -i '/^level-seed=/d' "$props"
 elif [[ "$seed" =~ ^-?[0-9]+$ ]]; then
-  if grep -q '^level-seed=' "$props"; then
+  if sudo grep -q '^level-seed=' "$props"; then
     sudo sed -i "s/^level-seed=.*/level-seed=${seed}/" "$props"
   else
     echo "level-seed=${seed}" | sudo tee -a "$props" >/dev/null
