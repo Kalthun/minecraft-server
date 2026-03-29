@@ -27,7 +27,7 @@ with pkgs;
         # server
         server-port = 25565;
         motd = "Savage Survival 3.0";
-        level-seed = lib.strings.trim (builtins.readFile ./seed.txt); # Large Mushroom Island @ [517, 70, -224]
+        level-seed = "4241307255164905481"; # Large Mushroom Island @ [517, 70, -224]
         level-name = "world";
         difficulty = "hard";
         gamemode = "survival";
@@ -78,7 +78,8 @@ with pkgs;
             SimpleVoiceChat     = fetchurl { url = "https://cdn.modrinth.com/data/9eGKb6K1/versions/pFTZ8sqQ/voicechat-fabric-1.21.11-2.6.12.jar";                 sha256 = "sha256-HwedHcqW2UhPdxPNROKWUcwIxAp0kj0gSdB7/dX3bcA="; };
           });
 
-        # Server datapacks # [⚠️]
+        # Server datapacks
+        # [⚠️] Change link style
         "world/datapacks" = linkFarm "datapacks" [ # [🔄]
           { name = "afk-display.zip";                     path = ../../datapacks/afk-display.zip; }
           { name = "anti-enderman-grief.zip";             path = ../../datapacks/anti-enderman-grief.zip; }
