@@ -1,5 +1,4 @@
 host := `hostname`
-server-name := "savage"
 
 default:
     @just --list
@@ -10,20 +9,23 @@ rebuild:
 update:
     nix flake update
 
-start:
-    sudo systemctl start minecraft-server-{{server-name}}
+start server:
+    sudo systemctl start minecraft-server-{{server}}
 
-stop:
-    sudo systemctl stop minecraft-server-{{server-name}}
+stop server:
+    sudo systemctl stop minecraft-server-{{server}}
 
-restart:
-    sudo systemctl restart minecraft-server-{{server-name}}
+restart server:
+    sudo systemctl restart minecraft-server-{{server}}
 
-logs:
-    journalctl -u minecraft-server-{{server-name}} -f
+logs server:
+    journalctl -u minecraft-server-{{server}} -f
 
-status:
-    systemctl status minecraft-server-{{server-name}}
+status server:
+    systemctl status minecraft-server-{{server}}
+
+backup server port password:
+    sudo ~/minecraft-server/scripts/backup.sh {{server}} {{port}} {{password}}
 
 clean:
     sudo nix-collect-garbage -d
