@@ -7,10 +7,11 @@ with pkgs;
   jvmOpts = "-Xms16G -Xmx16G"; # [🪧]
 
   whitelist = { # [🪧]
-    kalthun       = "97b72e9d-efc0-449c-94cd-5405f62c1be6";
-    hiuule        = "8d1e1c8c-d7c0-49ad-a2e2-50cb8f3e9cf2";
-    LunarAlloy    = "9307d0b2-89d9-45df-bcce-494a9154755d";
-    eggplantgrunt = "926c1118-702a-4b0c-bad1-6bfb6c75bcc4";
+    kalthun         = "97b72e9d-efc0-449c-94cd-5405f62c1be6";
+    hiuule          = "8d1e1c8c-d7c0-49ad-a2e2-50cb8f3e9cf2";
+    LunarAlloy      = "9307d0b2-89d9-45df-bcce-494a9154755d";
+    eggplantgrunt   = "926c1118-702a-4b0c-bad1-6bfb6c75bcc4";
+    lordvaderkush11 = "68dbf8e6-b6be-4986-9919-42c9f857490f";
   };
 
   serverProperties = {
