@@ -40,7 +40,12 @@ mcrcon -H 127.0.0.1 -P "$RCON_PORT" -p "$RCON_PASSWORD" "say [Backup] Saving and
 mcrcon -H 127.0.0.1 -P "$RCON_PORT" -p "$RCON_PASSWORD" "save-all flush"
 mcrcon -H 127.0.0.1 -P "$RCON_PORT" -p "$RCON_PASSWORD" "save-off"
 
-tar -C "$SERVER_DIR" -czf "$backup_file" "$LEVEL_NAME"
+tar -C "$SERVER_DIR" \
+  --exclude="${LEVEL_NAME}/data/DistantHorizons.sqlite" \
+  -czf "$backup_file" \
+  "$LEVEL_NAME"
+
+mcrcon -H 127.0.0.1 -P "$RCON_PORT" -p "$RCON_PASSWORD" "save-on"
 
 find "$BACKUP_DIR" -maxdepth 1 -type f -name "${LEVEL_NAME}-*.tar.gz" -printf '%T@ %p\n' \
   | sort -nr \
