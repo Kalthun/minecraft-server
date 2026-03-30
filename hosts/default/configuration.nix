@@ -16,6 +16,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN/9oYfDscH4zi7wjA7MXLJv/yLemtpli5V2HbnXcOrD kalthun@dirt" # Office Desktop
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICnsWG7wuw+eZv4vquJcSbXHH5oscQYNlb3A5KAbcFWS kalthun@Titan" # Home Desktop
     ];
   };
 
