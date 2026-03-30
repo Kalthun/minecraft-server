@@ -36,7 +36,7 @@ with pkgs;
 
     # Resourcepack
     resource-pack = "https://github.com/Kalthun/minecraft-server/releases/download/ss-rp/ss-rp-1_21_11-v2.zip";
-    resource-pack-sha1 = "9de459a8ef602563e0418da1a9d56026009c1ffd";
+    resource-pack-sha1 = "7d7c5bc70985c4c026d6d9c92c9b2a95d758c8c9";
     resource-pack-prompt = "{\"text\":\"See things my way.\"}";
     require-resource-pack = false;
   };
