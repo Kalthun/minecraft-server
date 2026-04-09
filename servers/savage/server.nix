@@ -85,7 +85,7 @@ with pkgs;
       { name = "real-time-clock.zip";                 path = ./datapacks/real-time-clock.zip; }
       { name = "silence-mobs.zip";                    path = ./datapacks/silence-mobs.zip; }
       { name = "silk-touch-budding-amethyst";         path = ./datapacks/silk-touch-budding-amethyst.zip; }
-      { name = "timber.zip";                          path = /.datapacks/timber.zip; }
+      { name = "timber.zip";                          path = ./datapacks/timber.zip; }
       { name = "unlock-all-recipes.zip";              path = ./datapacks/unlock-all-recipes.zip; }
       { name = "villager-workstation-highlights.zip"; path = ./datapacks/villager-workstation-highlights.zip; }
       { name = "wandering-trader-announcements.zip";  path = ./datapacks/wandering-trader-announcements.zip; }
