@@ -57,7 +57,6 @@ with pkgs;
       FabricAPI       = fetchurl { url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/i5tSkVBH/fabric-api-0.141.3%2B1.21.11.jar";                      sha256 = "sha256-hsRTqGE5Zi53VpfQOwynhn9Uc3SGjAyz49wG+Y2/7vU="; };
       FastNoise       = fetchurl { url = "https://cdn.modrinth.com/data/OnlVIpq5/versions/fP2AezPw/zfastnoise-1.0.25%2B1.21.11.jar";                       sha256 = "sha256-eYkfD/ohen/P0+F8lRMKoh9v9RiXfmG6zuSRbaOC0+Q="; };
       FerriteCore     = fetchurl { url = "https://cdn.modrinth.com/data/uXXizFIs/versions/Ii0gP3D8/ferritecore-8.2.0-fabric.jar";                          sha256 = "sha256-92vXYMv0goDMfEMYD1CJpGI1+iTZNKis89oEpmTCxxU="; };
-      InventoryManage = fetchurl { url = "https://cdn.modrinth.com/data/F7wXag4i/versions/j6rPwIOk/inventorymanagement-1.6.1%2B1.21.11.jar";               sha256 = "sha256-q1viTTMxCW50aRmGyu8oKvDyt8qB8a1RASaagQOeDC8="; };
       JustEnoughItems = fetchurl { url = "https://cdn.modrinth.com/data/u6dRKJwZ/versions/DNqt9cK5/jei-1.21.11-fabric-27.4.0.17.jar";                      sha256 = "sha256-F7+JsqOhkiKLKQrntaX6R4BiLpeydRef+pMB5/XAGiQ="; };
       Krypton         = fetchurl { url = "https://cdn.modrinth.com/data/fQEb0iXm/versions/O9LmWYR7/krypton-0.2.10.jar";                                    sha256 = "sha256-lCkdVpCgztf+fafzgP29y+A82sitQiegN4Zrp0Ve/4s="; };
       LetMeDespawn    = fetchurl { url = "https://cdn.modrinth.com/data/vE2FN5qn/versions/7gmpSYHk/LetMeDespawn-1.21.11-x-fabric-1.6.2.jar";               sha256 = "sha256-UKfHwvvBZW5EiBhq2npiVpJ/x0rEiavaxWZ/Z9/BhtM="; };
