@@ -36,8 +36,8 @@ with pkgs;
     "rcon.password" = "password";
 
     # Resourcepack
-    resource-pack = "https://github.com/Kalthun/minecraft-server/releases/download/ss-rp/ss-rp-1_21_11-v3.zip";
-    resource-pack-sha1 = "ee10511b22f30ca366b12f90f236eadc5de1a5f7";
+    resource-pack = "https://github.com/Kalthun/minecraft-server/releases/download/ss-rp/ss-rp-1_21_11-v4.zip";
+    resource-pack-sha1 = "a556dd0928cb910be41d3cffb039a338d8d2bdd4";
     resource-pack-prompt = "{\"text\":\"See things my way.\"}";
     require-resource-pack = false;
   };
