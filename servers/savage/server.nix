@@ -36,8 +36,8 @@ with pkgs;
     "rcon.password" = "password";
 
     # Resourcepack
-    resource-pack = "https://github.com/Kalthun/minecraft-server/releases/download/ss-rp/ss-rp-1_21_11-v2.zip";
-    resource-pack-sha1 = "9de459a8ef602563e0418da1a9d56026009c1ffd";
+    resource-pack = "https://github.com/Kalthun/minecraft-server/releases/download/ss-rp/ss-rp-1_21_11-v3.zip";
+    resource-pack-sha1 = "e92a83a6e9e4eae07dd89374de12c165a28beb4f";
     resource-pack-prompt = "{\"text\":\"See things my way.\"}";
     require-resource-pack = false;
   };
@@ -78,14 +78,18 @@ with pkgs;
       { name = "anti-enderman-grief.zip";             path = ./datapacks/anti-enderman-grief.zip; }
       { name = "coordinates-hud.zip";                 path = ./datapacks/coordinates-hud.zip; }
       { name = "durability-ping.zip";                 path = ./datapacks/durability-ping.zip; }
+      { name = "kill-empty-boats.zip";                path = ./datapacks/kill-empty-boats.zip; }
       { name = "multiplayer-sleep.zip";               path = ./datapacks/multiplayer-sleep.zip; }
       { name = "name-colors.zip";                     path = ./datapacks/name-colors.zip; }
       { name = "player-head-drops.zip";               path = ./datapacks/player-head-drops.zip; }
       { name = "real-time-clock.zip";                 path = ./datapacks/real-time-clock.zip; }
       { name = "silence-mobs.zip";                    path = ./datapacks/silence-mobs.zip; }
+      { name = "silk-touch-budding-amethyst";         path = ./datapacks/silk-touch-budding-amethyst.zip; }
+      { name = "timber.zip";                          path = /.datapacks/timber.zip; }
       { name = "unlock-all-recipes.zip";              path = ./datapacks/unlock-all-recipes.zip; }
       { name = "villager-workstation-highlights.zip"; path = ./datapacks/villager-workstation-highlights.zip; }
       { name = "wandering-trader-announcements.zip";  path = ./datapacks/wandering-trader-announcements.zip; }
+      # { name = "wood-stripper.zip";                          path = /.datapacks/} # not in 1.21.11
     ];
 
   };
