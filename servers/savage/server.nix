@@ -76,6 +76,7 @@ with pkgs;
       { name = "afk-display.zip";                     path = ./datapacks/afk-display.zip; }
       { name = "anti-enderman-grief.zip";             path = ./datapacks/anti-enderman-grief.zip; }
       { name = "coordinates-hud.zip";                 path = ./datapacks/coordinates-hud.zip; }
+      { name = "daycount-typewritter.zip";            path = ./datapacks/daycount-typewritter.zip; }
       { name = "durability-ping.zip";                 path = ./datapacks/durability-ping.zip; }
       { name = "kill-empty-boats.zip";                path = ./datapacks/kill-empty-boats.zip; }
       { name = "multiplayer-sleep.zip";               path = ./datapacks/multiplayer-sleep.zip; }
