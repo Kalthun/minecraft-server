@@ -89,7 +89,7 @@ with pkgs;
       { name = "unlock-all-recipes.zip";              path = ./datapacks/unlock-all-recipes.zip; }
       { name = "villager-workstation-highlights.zip"; path = ./datapacks/villager-workstation-highlights.zip; }
       { name = "wandering-trader-announcements.zip";  path = ./datapacks/wandering-trader-announcements.zip; }
-      # { name = "wood-stripper.zip";                          path = /.datapacks/} # not in 1.21.11
+      { name = "wood-stripper.zip";                   path = ./datapacks/wood-stripper.zip; }
     ];
 
   };
