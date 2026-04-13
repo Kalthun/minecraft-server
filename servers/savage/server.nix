@@ -78,6 +78,7 @@ with pkgs;
       { name = "coordinates-hud.zip";                 path = ./datapacks/coordinates-hud.zip; }
       { name = "daycount-typewritter.zip";            path = ./datapacks/daycount-typewritter.zip; }
       { name = "durability-ping.zip";                 path = ./datapacks/durability-ping.zip; }
+      { name = "health-indicator.zip";                path = ./datapacks/health-indicator.zip; }
       { name = "kill-empty-boats.zip";                path = ./datapacks/kill-empty-boats.zip; }
       { name = "multiplayer-sleep.zip";               path = ./datapacks/multiplayer-sleep.zip; }
       { name = "name-colors.zip";                     path = ./datapacks/name-colors.zip; }
@@ -86,6 +87,7 @@ with pkgs;
       { name = "silence-mobs.zip";                    path = ./datapacks/silence-mobs.zip; }
       { name = "silk-touch-budding-amethyst";         path = ./datapacks/silk-touch-budding-amethyst.zip; }
       { name = "timber.zip";                          path = ./datapacks/timber.zip; }
+      { name = "tnt-timer.zip";                       path = ./datapacks/tnt-timer.zip; }
       { name = "unlock-all-recipes.zip";              path = ./datapacks/unlock-all-recipes.zip; }
       { name = "villager-workstation-highlights.zip"; path = ./datapacks/villager-workstation-highlights.zip; }
       { name = "wandering-trader-announcements.zip";  path = ./datapacks/wandering-trader-announcements.zip; }
