@@ -69,7 +69,6 @@ with pkgs;
       SimpleVoiceChat = fetchurl { url = "https://cdn.modrinth.com/data/9eGKb6K1/versions/pFTZ8sqQ/voicechat-fabric-1.21.11-2.6.12.jar";                   sha256 = "sha256-HwedHcqW2UhPdxPNROKWUcwIxAp0kj0gSdB7/dX3bcA="; };
       Spark           = fetchurl { url = "https://cdn.modrinth.com/data/l6YH9Als/versions/gonLOAU1/spark-1.10.170-fabric.jar";                             sha256 = "sha256-U2UqZoLWmxqJJO6a6OYZJVUWOatUC9U/mBSxEpQ15+U="; };
       StructLayOpti   = fetchurl { url = "https://cdn.modrinth.com/data/ayPU0OHc/versions/YDgvKeWI/structure_layout_optimizer-1.1.4%2B1.21.11-fabric.jar"; sha256 = "sha256-b72REzpa/xTawgCNie3HzQdwyza1nk5x3UdN13PK560="; };
-      TeamTasks       = fetchurl { url = "https://cdn.modrinth.com/data/RcGBxDyt/versions/Cpy4Amwx/todolist-fabric-1.21.1-1.2.2.jar";                      sha256 = "sha256-AL5YcTM2zZKqP4HJK/eyJBDO9DyBQkN0oDZ3b1vafSw="; };
     });
 
     # Server datapacks # [🔄]
