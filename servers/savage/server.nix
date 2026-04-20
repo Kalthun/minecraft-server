@@ -80,6 +80,7 @@ with pkgs;
       { name = "durability-ping.zip";                 path = ./datapacks/durability-ping.zip; }
       { name = "health-indicator.zip";                path = ./datapacks/health-indicator.zip; }
       { name = "kill-empty-boats.zip";                path = ./datapacks/kill-empty-boats.zip; }
+      { name = "more-mob-heads.zip";                  path = ./datapacks/more-mob-heads.zip; }
       { name = "multiplayer-sleep.zip";               path = ./datapacks/multiplayer-sleep.zip; }
       { name = "name-colors.zip";                     path = ./datapacks/name-colors.zip; }
       { name = "player-head-drops.zip";               path = ./datapacks/player-head-drops.zip; }
