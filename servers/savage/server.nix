@@ -54,6 +54,7 @@ with pkgs;
       ClothConfigAPI  = fetchurl { url = "https://cdn.modrinth.com/data/9s6osm5g/versions/xuX40TN5/cloth-config-21.11.153-fabric.jar";                     sha256 = "sha256-ikDITl7N5SWs+2xOE7gALaz8o++VNNf69ugEllb0I8g="; };
       Clumps          = fetchurl { url = "https://cdn.modrinth.com/data/Wnxd13zP/versions/OgBE8Rz4/Clumps-fabric-1.21.11-29.0.0.1.jar";                    sha256 = "sha256-4yESCFKYF+XvzQ4u6W+cjFFui7reWihs1rii9OcPYWM="; };
       DistantHorizons = fetchurl { url = "https://cdn.modrinth.com/data/uCdwusMi/versions/GT3Bm3GN/DistantHorizons-2.4.5-b-1.21.11-fabric-neoforge.jar";   sha256 = "sha256-dpTHoX5V9b7yG0VsIqKxxOSAYLN0Z97itx1MEuWGvD8="; };
+      EasyShulkerBox  = fetchurl { url = "https://cdn.modrinth.com/data/gA5euN8S/versions/bYZtnl61/EasyShulkerBoxes-v21.11.0-mc1.21.11-Fabric.jar";        sha256 = "sha256-grPKaaUt4eK1Hgu5i/tyLWpNd3XJ3ra8GCWqaRjmTGU="; };
       FabricAPI       = fetchurl { url = "https://cdn.modrinth.com/data/P7dR8mSH/versions/i5tSkVBH/fabric-api-0.141.3%2B1.21.11.jar";                      sha256 = "sha256-hsRTqGE5Zi53VpfQOwynhn9Uc3SGjAyz49wG+Y2/7vU="; };
       FastNoise       = fetchurl { url = "https://cdn.modrinth.com/data/OnlVIpq5/versions/fP2AezPw/zfastnoise-1.0.25%2B1.21.11.jar";                       sha256 = "sha256-eYkfD/ohen/P0+F8lRMKoh9v9RiXfmG6zuSRbaOC0+Q="; };
       FerriteCore     = fetchurl { url = "https://cdn.modrinth.com/data/uXXizFIs/versions/Ii0gP3D8/ferritecore-8.2.0-fabric.jar";                          sha256 = "sha256-92vXYMv0goDMfEMYD1CJpGI1+iTZNKis89oEpmTCxxU="; };
