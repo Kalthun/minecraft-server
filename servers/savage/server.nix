@@ -73,6 +73,8 @@ with pkgs;
       SimpleVoiceChat = fetchurl { url = "https://cdn.modrinth.com/data/9eGKb6K1/versions/pFTZ8sqQ/voicechat-fabric-1.21.11-2.6.12.jar";                   sha256 = "sha256-HwedHcqW2UhPdxPNROKWUcwIxAp0kj0gSdB7/dX3bcA="; };
       Spark           = fetchurl { url = "https://cdn.modrinth.com/data/l6YH9Als/versions/gonLOAU1/spark-1.10.170-fabric.jar";                             sha256 = "sha256-U2UqZoLWmxqJJO6a6OYZJVUWOatUC9U/mBSxEpQ15+U="; };
       StructLayOpti   = fetchurl { url = "https://cdn.modrinth.com/data/ayPU0OHc/versions/YDgvKeWI/structure_layout_optimizer-1.1.4%2B1.21.11-fabric.jar"; sha256 = "sha256-b72REzpa/xTawgCNie3HzQdwyza1nk5x3UdN13PK560="; };
+      XaeroMiniMap    = fetchurl { url = "https://cdn.modrinth.com/data/1bokaNcj/versions/avSqR3vF/xaerominimap-fabric-1.21.11-25.3.10.jar";               sha256 = "sha256-rArQ9c4xjsMocpITA7Axq/40jeFKiG0gr5GazxrlJO0="; };
+      XaeroWorldMap   = fetchurl { url = "https://cdn.modrinth.com/data/NcUtCpym/versions/CkZVhVE0/xaeroworldmap-fabric-1.21.11-1.40.11.jar";              sha256 = "sha256-916LgIsaT3F2HToVohaDfQkq7M6BTlvoneXRe2UNKPw="; };
     });
 
     # Server datapacks # [🔄]
