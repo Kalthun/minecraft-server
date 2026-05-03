@@ -64,6 +64,7 @@ with pkgs;
       Krypton         = fetchurl { url = "https://cdn.modrinth.com/data/fQEb0iXm/versions/O9LmWYR7/krypton-0.2.10.jar";                                    sha256 = "sha256-lCkdVpCgztf+fafzgP29y+A82sitQiegN4Zrp0Ve/4s="; };
       LetMeDespawn    = fetchurl { url = "https://cdn.modrinth.com/data/vE2FN5qn/versions/7gmpSYHk/LetMeDespawn-1.21.11-x-fabric-1.6.2.jar";               sha256 = "sha256-UKfHwvvBZW5EiBhq2npiVpJ/x0rEiavaxWZ/Z9/BhtM="; };
       Lithium         = fetchurl { url = "https://cdn.modrinth.com/data/gvQqBUqZ/versions/Ow7wA0kG/lithium-fabric-0.21.4%2Bmc1.21.11.jar";                 sha256 = "sha256-UTXEHaW0PL3LKUJL3mUZUUOsQITiODTI6sBllCIBx4s="; };
+      Measurements    = fetchurl { url = "https://cdn.modrinth.com/data/wLINU2AB/versions/qBimWTJq/Measurements-fabric-1.21.11-3.7.0.jar";                 sha256 = "sha256-BTwOK4+nggaVoBhXDBKwzFlPmAnYvHqvHwoTnaiJHEo="; };
       PuzzlesLib      = fetchurl { url = "https://cdn.modrinth.com/data/QAGBst4M/versions/owXZpJai/PuzzlesLib-v21.11.12-mc1.21.11-Fabric.jar";             sha256 = "sha256-E7GyR3Bvy+atMGLQD1yW4XhfpQbXa8ZIZPljHoekKCc="; };
       QuickPack       = fetchurl { url = "https://cdn.modrinth.com/data/pSISfJ4O/versions/GKLuxqjp/quick-pack-fabric-1.2.0%2B1.21.10.jar";                 sha256 = "sha256-UQrbmKRZld8fqmjIShrEpkLmKesP+0i4yGsHVa2Du7s="; };
       ResourcefulConf = fetchurl { url = "https://cdn.modrinth.com/data/M1953qlQ/versions/8bR7M6K7/ResourcefulConfig-fabric-1.21.11-3.11.3.jar";           sha256 = "sha256-gIaWEhWOueF1NGyji9dodeaex73g9BHx2tlZGoxYJpU="; };
