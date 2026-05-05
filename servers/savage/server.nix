@@ -92,6 +92,7 @@ with pkgs;
       { name = "name-colors.zip";                     path = ./datapacks/name-colors.zip; }
       { name = "player-head-drops.zip";               path = ./datapacks/player-head-drops.zip; }
       { name = "real-time-clock.zip";                 path = ./datapacks/real-time-clock.zip; }
+      { name = "revault.zip";                         path = ./datapacks/revault.zip; }
       { name = "silence-mobs.zip";                    path = ./datapacks/silence-mobs.zip; }
       { name = "silk-touch-budding-amethyst";         path = ./datapacks/silk-touch-budding-amethyst.zip; }
       { name = "timber.zip";                          path = ./datapacks/timber.zip; }
